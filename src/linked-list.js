@@ -1,5 +1,3 @@
-class LinkedList {
-
 /**
  * It returns an object with two properties, head
  * and tail, both undefined
