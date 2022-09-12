@@ -23,6 +23,17 @@ const ListNode
         data,
         next,
       } );
+/**
+ * The method creates a node and prepends it at the beginning of the list.
+ *
+ * @param list - the list to prepend to
+ * @param data - the data to add to the list
+ * @returns A new list with the data prepended to the beginning.
+ */
+const prepend
+  = list =>
+    data =>
+      LinkedList( ListNode( data )( list.head ) )( list.head );
 
     this.head = undefined;
     this.tail = undefined;
