@@ -241,6 +241,18 @@ const addAt
           return restoreFrom( prepended )( whatToRestore )( whatToRestore.length - 1 );
 
         };
+const removeAt
+    = list =>
+      index => {
+
+        const sliced        = getToStart( list )( index );
+        const shifted       = shift( sliced );
+        const whatToRestore = toArray( list.head )( [] )
+          .slice( 0, index );
+
+        return restoreFrom( shifted )( whatToRestore )( whatToRestore.length - 1 );
+
+      };
 const list  = emptyList;
 const list2 = prepend( list )( 2 );
 const list3 = prepend( list2 )( 1 );
@@ -249,4 +261,4 @@ const list5 = prepend( list4 )( -123 );
 console.log( list5 );
 console.log( toString( list5 ) );
 const list6 = addAt( list5 )( 3 )( 999 );
-console.log( toString( list6 ) );
+console.log( toString( removeAt(list6)(7) ) );
